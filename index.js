@@ -9,7 +9,7 @@ const users = require('./users.json')
 
 //app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.json('Hello World')
 })
 
