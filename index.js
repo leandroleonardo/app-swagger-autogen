@@ -8,6 +8,6 @@ const port = process.env.PORT
 http.createServer(app).listen(port)
 console.log("Listening at:// port:%s (HTTP)", port)
 
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 require('./endpoints')(app)
