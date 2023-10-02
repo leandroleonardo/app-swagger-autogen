@@ -7,7 +7,11 @@ const port = process.env.PORT
 const app = express()
 const users = require('./users.json')
 
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+//app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+app.use('/' (req, res) => {
+    res.status(200)
+}
 
 app.get('/users/:id', async (req, res) => {
 
