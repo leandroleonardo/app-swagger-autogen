@@ -1,5 +1,6 @@
 
 const users = require('./users.json')
+const swagger_json = require('./swagger_output.json')
 
 module.exports = function (app) {
 
@@ -19,6 +20,17 @@ module.exports = function (app) {
         } else {
             res.status(404)
         }
+
+    })
+
+    app.get('/swagger/', (req, res) => {
+
+        if (swagger_json) {
+            return res.status(200).json(swagger_json)
+        } else {
+            res.status(404)
+        }
+
     })
 
 }
