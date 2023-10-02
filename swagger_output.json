@@ -7,12 +7,17 @@
   },
   "host": "app-swagger-autogen.vercel.app",
   "basePath": "/",
+  "tags":[{
+    "name": "users",
+    "description": "System users"
+  }],
   "schemes": [
     "https"
   ],
   "paths": {
     "/users/{id}": {
       "get": {
+        "tags":["users"],
         "description": "",
         "parameters": [
           {
@@ -34,6 +39,7 @@
     },
     "/users/": {
       "get": {
+        "tags":["users"],
         "description": "",
         "responses": {
           "200": {
