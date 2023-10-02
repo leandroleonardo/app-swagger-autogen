@@ -9,9 +9,9 @@ const users = require('./users.json')
 
 //app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
-app.use('/' (req, res) => {
-    res.status(200)
-}
+app.use('/', (req, res) => {
+    res.json('Hello World')
+})
 
 app.get('/users/:id', async (req, res) => {
 
