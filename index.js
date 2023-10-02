@@ -10,8 +10,4 @@ console.log("Listening at:// port:%s (HTTP)", port)
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
-app.get('/teste', async (req, res) => {
-  res.json('teste')
-}  
-
 require('./endpoints')(app)
