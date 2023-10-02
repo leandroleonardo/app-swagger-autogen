@@ -7,11 +7,6 @@
   },
   "host": "app-swagger-autogen.vercel.app",
   "basePath": "/",
-  "tags": [
-    {
-      "name": "users",
-      "description": "Proprietary system users",
-    }],
   "schemes": [
     "https"
   ],
