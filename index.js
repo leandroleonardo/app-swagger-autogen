@@ -7,12 +7,12 @@ const port = process.env.PORT
 const app = express()
 const users = require('./users.json')
 
-//app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 app.get('/', (req, res) => {
     res.json('Hello World')
 })
-
+/*
 app.get('/users/:id', async (req, res) => {
 
     users.forEach(user => {
@@ -29,8 +29,8 @@ app.get('/users/', (req, res) => {
     } else {
         res.status(404)
     }
-})
+})*/
 
-//require('./endpoints')(app)
+require('./endpoints')(app)
 
 app.listen(port, () => console.log(`Listening on port ${port}`))
